@@ -1,0 +1,422 @@
+/* GOOGLE FONT */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap");
+
+/* VARIABLE CSS */
+:root {
+  /* COLORs */
+  --primary-color: #151515;
+  --body-color: #ffffff;
+  --div-bg-color: #5d5d5d;
+  --decoration-color: #ff0666;
+  --sub-sec-color: #f9f9f9;
+
+  /*FONT AND TUPOGRAPHY  */
+  --body-font: "poppins", sans-serif;
+
+  --h1-font-size: 4.5rem;
+  --h2-font-size: 3.75rem;
+  --h3-font-size: 1.5rem;
+  --normal-font-size: 1.875rem;
+  --small-font-size: 1.125rem;
+  --smaller-font-size: 1rem;
+
+  /* FONT WEIGHT */
+  --font-normal: 400;
+  --font-semibold: 600;
+  --font-bold: 700;
+  --font-extrabold: 800;
+
+  /* Margenes Bottom */
+  --mb-0-25: 0.25rem;
+  --mb-0-5: 0.5rem;
+  --mb-0-75: 0.75rem;
+  --mb-1: 1rem;
+  --mb-1-5: 1.5rem;
+  --mb-2: 2rem;
+  --mb-2-5: 2.5rem;
+  --mb-3: 3rem;
+}
+
+@media screen and (max-width: 992px) {
+  :root {
+    --h1-font-size: 3.75rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.875rem;
+    --normal-font-size: 1.125rem;
+    --small-font-size: 1rem;
+  }
+}
+
+/* BASE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body,
+button,
+input,
+textarea {
+  font-family: var(--body-font);
+}
+body {
+  background-color: var(--body-color);
+  color: var(--primary-color);
+}
+h1,
+h2,
+h3 {
+  color: var(--primary-color);
+}
+p{
+    font-weight: var(--font-normal);
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+/* RESUABLE CSS CLASSES */
+.section {
+  padding: 6rem 0 2rem;
+}
+.section__title {
+  font-size: var(--h2-font-size);
+  color: var(--primary-color);
+}
+.section__subtitle {
+  display: block;
+  font-size: var(--normal-font-size);
+  margin-bottom: 4rem;
+}
+.section__title,
+.section__subtitle {
+  text-align: center;
+}
+/* LAYOUT */
+
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+.flex{
+    display: flex;
+}
+.button {
+  display: inline-flex;
+  background-color: var(--decoration-color);
+  color: var(--body-color);
+  padding: 1.5rem 3.5rem;
+  border-radius: 1rem;
+  font-weight: var(--font-semibold);
+}
+.button__2{
+    display: inline-flex;
+    border: 1px solid var(--decoration-color);
+    background-color: transparent;
+    color: var(--decoration-color);
+    padding: 1.5rem 3.5rem;
+    border-radius: 1rem;
+    font-weight: var(--font-semibold);
+    margin-left: var(--mb-1);
+  }
+.button__icon {
+  margin-left: var(--mb-0-5);
+}
+
+/* BREAKPONTS */
+/* For large devices */
+@media screen and (max-width: 992px) {
+  .container {
+    margin-left: var(--mb-1-5);
+    margin-right: var(--mb-1-5);
+  }
+  .button {
+    padding: 1rem 1.75rem;
+  }
+  .button__2 {
+    padding: 1rem 1.75rem;
+  }
+  .button__icon {
+    width: 22px;
+    height: 22px;
+  }
+}
+/* For medium devices */
+@media screen and (max-width: 768px) {
+  body {
+    margin: 0 0 var(--header-height);
+  }
+  .section {
+    padding: 2rem 0 4rem;
+  }
+  .section__subtitle {
+    margin-bottom: var(--mb-3);
+  }
+}
+@media screen and (max-width: 576px) {
+}
+/* For  small devices*/
+
+@media screen and (max-width: 350px) {
+  :root {
+    --big-font-size: 2.25rem;
+  }
+  .container {
+    margin-left: var(--mb-1);
+    margin-right: var(--mb-1);
+  }
+}
+
+.header{
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position-x: 85%;
+    background-position-y: 100%;
+    background-size: 40%;
+    background-image: url(./img/BG.png);
+
+    background-color: var(--primary-color);
+    color: var(--body-color);
+}
+.logo{
+    color: var(--body-color);
+    font-size: 2.5rem;
+    font-weight: var(--font-bold);
+}
+/* nav */
+#sideNav{
+    width: 300px;
+    height: 100vh;
+    position: fixed;
+    right: -300px;
+    top: 0;
+    background-color: var(--decoration-color);
+    opacity: 0.9;
+    z-index: 2;
+    transition: 0.5s;
+}
+nav ul li {
+    position: relative;
+    left: 150px;
+    top: 150px;
+    margin: 5rem 0;
+    font-size: var(--small-font-size);
+    
+}
+nav a{
+    color: var(--body-color);
+    text-transform: uppercase;
+    
+}
+#menu__btn{
+position: fixed;
+right: 15%;
+top: 14.5%;
+z-index: 2;
+}
+.intro{
+    max-width: 590px;
+}
+.intro h1{
+    color: var(--body-color);
+    font-size: var(--h1-font-size);
+    font-weight: var(--font-bold);
+    line-height: 5rem;
+    text-transform: capitalize;
+    margin-bottom: var(--mb-2);
+}
+.intro p{
+    font-size: var(--small-font-size);
+    margin-bottom: var(--mb-2);
+    
+}
+/* BREAKPONTS */
+/* For large devices */
+@media screen and (max-width: 992px) {
+    .header{
+        background-size: 55%;
+        background-position-x: 95%;
+    }
+    .intro{
+        max-width: 500px;
+    }
+  /* For medium devices */
+  @media screen and (max-width: 768px) {
+    .header{
+        background-size: 45%;
+        background-position-x: 100%;
+        background-position-y: 100%;
+    }
+    .logo{
+        margin-top:3rem;
+    }
+  }
+  @media screen and (max-width: 576px) {
+  }
+  /* For  small devices*/
+  
+  @media screen and (max-width: 350px) {
+    .logo{
+        margin-top:4rem;
+    }
+    #sideNav{
+        width: 200px;
+        height: 100vh;
+        position: fixed;
+        right: -200px;
+        top: 0;
+        background-color: var(--decoration-color);
+        z-index: 2;
+        transition: 0.5s;
+    }
+    .intro h1{
+        line-height: 4.5rem;
+        margin-bottom: var(--mb-0-5);
+    }
+    .intro p{
+        margin-bottom: var(--mb-0-75);
+    }
+    nav ul li {
+        position: relative;
+        left: 80px;
+        top: 150px;
+        margin: 5rem 0;
+        font-size: var(--small-font-size);
+        
+    }
+  }
+}
+/* EXPERIENCE */
+.flex{
+    justify-content: space-between;
+    align-items: center;
+}
+.flex__1, .flex__2{
+    flex-basis: 49%;
+}
+.flex__1 h2{
+    font-size: var(--h2-font-size);
+    font-weight: var(--font-extrabold);
+    line-height: 4rem;
+    text-transform: capitalize;
+    margin-bottom: var(--mb-2);
+}
+.flex__1 p{
+    font-size: var(--small-font-size);
+    margin-bottom: var(--mb-0-75);
+}
+.flex__10{
+    display: flex;
+    justify-content: flex-start;
+ align-items: center;
+}
+.experience{
+    display: inline-block;
+    font-size: var(--h3-font-size);
+    font-weight: var(--font-extrabold);
+    
+}
+.number{
+   
+    color: var(--decoration-color);
+    font-size: 6.25rem;
+    font-weight: var(--font-extrabold);
+    margin-right: 0.5rem;
+}
+.read-more{
+    border-radius:0;
+    text-transform: capitalize;
+   
+}
+.read-more a{
+    color: var(--body-color);
+}
+.flex__2 {
+    width: 589px;
+    height: 639px;
+    background-color: #F9F9F9;
+    
+   
+}
+.img{
+    width: 497px;
+    height: 550px;
+    background-color: var(--div-bg-color);
+    margin-inline: auto;
+    margin-top: 3rem;
+
+  
+   
+}
+/* BREAKPONTS */
+/* For large devices */
+@media screen and (max-width: 992px) {
+    .header{
+        background-size: 55%;
+        background-position-x: 95%;
+    }
+    .intro{
+        max-width: 500px;
+    }
+  /* For medium devices */
+  @media screen and (max-width: 768px) {
+    .header{
+        background-size: 45%;
+        background-position-x: 100%;
+        background-position-y: 100%;
+    }
+    .logo{
+        margin-top:3rem;
+    }
+  }
+  @media screen and (max-width: 576px) {
+  }
+  /* For  small devices*/
+  
+  @media screen and (max-width: 350px) {
+    .logo{
+        margin-top:4rem;
+    }
+    #sideNav{
+        width: 200px;
+        height: 100vh;
+        position: fixed;
+        right: -200px;
+        top: 0;
+        background-color: var(--decoration-color);
+        z-index: 2;
+        transition: 0.5s;
+    }
+    .intro h1{
+        line-height: 4.5rem;
+        margin-bottom: var(--mb-0-5);
+    }
+    .intro p{
+        margin-bottom: var(--mb-0-75);
+    }
+    nav ul li {
+        position: relative;
+        left: 80px;
+        top: 150px;
+        margin: 5rem 0;
+        font-size: var(--small-font-size);
+        
+    }
+  }
+}

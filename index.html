@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>John Doe </title>
+    <link rel="stylesheet" href="./stylesheet.css">
+</head>
+<body>
+    <header class="header">
+    <section class="section">
+
+        <div class="container">
+           
+                <div class="logo">LOGO</div>
+                <nav id="sideNav">
+                    <ul>
+                        <li><a href="#">home</a></li>
+                        <li><a href="#">home</a></li>
+                        <li><a href="#">home</a></li>
+                        <li><a href="#">home</a></li>
+                        <li><a href="#">home</a></li>
+                    </ul>
+                </nav>
+                <img src="./img/menu.png" id="menu__btn" alt="">
+        </div>
+    </section>
+    <section class="section home">
+        <div class="container bg__img">
+            <div class="intro">
+               
+                    <h1>Hi, i'm john doe <br/> web designer</h1>
+                    <p>Duis aute irure dolor in reprehenderit in volupatate velit esse 
+                        cillum dolore eu fugiat nulla sint accaecat cupidatat.
+            </div>
+          
+                <button class="button">Contact Us</button>
+                <button class="button__2">Latest Work</button>
+           
+        </div>
+    </section>
+    
+      </header>
+      <main>
+        <!-- EXPERIENCE -->
+      <section class="section">
+        <div class="container">
+            <div class="flex">
+                <div class="flex__1">
+                    <h2>i make a professional and creative design &period;</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae maiores cupiditate voluptatum hic beatae deleniti repellendus facilis aperiam fugiat alias tempora accusantium, assumenda corporis magni fuga debitis officiis minus necessitatibus expedita odit. Error vel vitae assumenda, odio incidunt illum exercitationem magnam quisquam nemo consequatur quam alias sapiente ea ipsa unde.</p>
+                   <div class="flex__10"> <span class="number">10</span> <div class="experience"> years of <br /> experience</div></div>
+                   <button class="button read-more"><a href="#">read more</a></button>
+                </div>
+                <div class="flex__2"><div class="img"></div></div>
+            </div>
+        </div>
+      </section>
+      </main>
+
+
+      <!-- for menu btn work -->
+      <script>
+        const menu__btn = document.getElementById("menu__btn");
+        const sideNav = document.getElementById("sideNav");
+        sideNav.style.right ="-300px";
+        menu__btn.onclick = function(){
+            if(sideNav.style.right == "-300px"){
+                sideNav.style.right = "0";
+            }
+            else{
+                sideNav.style.right = "-300px";
+            }
+        }
+      </script>
+</body>
+</html>
